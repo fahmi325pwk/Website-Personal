@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+body {
+  background: #f3f4f6;
+  font-family: "Inter", sans-serif;
+}
+
+.orders-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.4s ease;
+}
+
+/* HEADER */
+.orders-header h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.orders-header p {
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* ALERT */
+.alert.success {
+  background: #dcfce7;
+  color: #166534;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* FILTER FORM */
+.orders-controls {
+  margin: 1rem 0;
+}
+.filter-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.filter-form input,
+.filter-form select {
+  padding: 0.55rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+}
+.btn-filter {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-filter:hover {
+  background: #1e40af;
+}
+
+/* TABLE */
+.orders-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.orders-table th {
+  background: #f9fafb;
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+  border-bottom: 2px solid #e5e7eb;
+}
+.orders-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+.orders-table td:last-child {
+  text-align: center;
+}
+
+/* STATUS */
+.status {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+.status-process {
+  background: #fff7ed;
+  color: #c2410c;
+}
+.status-shipped {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+.status-done {
+  background: #dcfce7;
+  color: #166534;
+}
+.status-cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.status-default {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* ACTION BUTTONS */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.btn-detail,
+.btn-cancel {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  padding: 6px 10px;
+  transition: 0.25s;
+}
+.btn-detail {
+  background: #2563eb;
+  color: #fff;
+}
+.btn-detail:hover {
+  background: #1e40af;
+}
+.btn-cancel {
+  background: #f3f4f6;
+  color: #991b1b;
+}
+.btn-cancel:hover {
+  background: #fee2e2;
+}
+
+/* NO ORDERS */
+.no-orders {
+  text-align: center;
+  color: #6b7280;
+  padding: 2rem 0;
+}
+.no-orders i {
+  font-size: 3rem;
+  color: #9ca3af;
+  margin-bottom: 0.6rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

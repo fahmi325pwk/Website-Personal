@@ -1,0 +1,206 @@
+/* ==============================
+   GRID PRODUK
+   ============================== */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  align-items: start; /* agar semua sejajar dari atas */
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+/* Responsiveness untuk grid */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.6rem;
+  }
+}
+
+/* ==============================
+   KARTU PRODUK
+   ============================== */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  padding: 1rem;
+  width: 100%;
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ==============================
+   GAMBAR PRODUK
+   ============================== */
+.product-image {
+  width: 100%;
+  height: 170px; /* tinggi seragam biar sejajar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f9fafb;
+  margin-bottom: 0.6rem;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* agar tidak terpotong tapi tetap proporsional */
+}
+
+/* ==============================
+   INFO PRODUK
+   ============================== */
+.product-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0.4rem 0;
+  min-height: 40px; /* supaya judul sejajar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price {
+  color: #1e40af;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+/* ==============================
+   TOMBOL PRODUK
+   ============================== */
+.product-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.btn-buy-now,
+.btn-add-cart {
+  background: #2563eb;
+  color: #fff;
+  padding: 0.45rem 0.9rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  transition: 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  justify-content: center;
+  flex: 1;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-buy-now:hover,
+.btn-add-cart:hover {
+  background: #3b3eff;
+}
+
+.btn-buy-now {
+  background: #2563eb;
+}
+
+.btn-buy-now:hover {
+  background: #3b3eff;
+}
+
+/* ==============================
+   TIDAK ADA HASIL
+   ============================== */
+.no-result {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1rem;
+  color: #6b7280;
+  padding: 1.5rem 0;
+}
+
+/* ==============================
+   SORT FILTER
+   ============================== */
+.sort-filter {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sort-filter label {
+  font-weight: 600;
+  color: #111827;
+}
+
+.sort-filter select {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.9rem;
+  color: #111827;
+  cursor: pointer;
+  transition: border-color 0.25s ease;
+}
+
+.sort-filter select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* ==============================
+   PAGINATION
+   ============================== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.page-link {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.page-link:hover {
+  background: #f3f4f6;
+  color: #1e40af;
+}
+
+.page-link.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
